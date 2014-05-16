@@ -11,23 +11,15 @@
 int main(int argc, const char * argv[])
 {
 
-    @autoreleasepool {
-        int n, n2,i ;
-        
-        NSLog(@"n     n2");
-        
-        
-        for(i=1;i <=10; ++i) {
-            
-            n = i;
-            
-            n2=i;
-            
-            
-            NSLog(@"%i      %i", n, n2);
-            
-        }
-    }
-    return 0;
-}
-
+    switch (i) {
+        case 1:
+            NSLog(@"Initial alance is %i",MyAccount.Balance);
+            if (MyAccount.Balance == 0)
+            {
+                [MyAccount openAccount : 100];
+            }
+            else
+            {
+                NSLog(@"You Already have a account.");
+            }
+            break;
